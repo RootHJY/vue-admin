@@ -1,0 +1,45 @@
+@charset "utf-8";
+html{ height:100%;}
+body { @extend %fontPFR; height:100%;  line-height:1.5714; background-color:#fff; font-size:$BodySize; }
+
+img{ max-width:100%; }
+.justify{@extend %justify;}
+.clearfix{@extend %clearfix;}
+.fleft{ float: left; }
+.fright{ float: right; }
+.inline{ display:inline-block;}
+.ismiddle{ display:inline-block; vertical-align: middle;}
+
+::-webkit-scrollbar {width:6px; height: 10px; }
+::-webkit-scrollbar-button {display: none; }
+::-webkit-scrollbar-track {background: #f6f6f6; }
+::-webkit-scrollbar-track-piece {background: #f6f6f6; }
+::-webkit-scrollbar-thumb {background: #ddd; border-radius: 4px; }
+::-webkit-scrollbar-corner {background: #f6f6f6; }
+::-webkit-resizer {background: #ddd; }
+
+#app{ height:100% ;width:100%; position:relative;  }
+
+#sidebar{ position:fixed; z-index:99; left:0; top:0; height:100%; width:180px; background-color:rgb(48, 65, 86); @extend %trslow;
+    .logo{ text-align:center; padding:10px; }
+    .logo_b{ display: inline-block;  width:110px;}
+    .logo_s{ display: none; width:30px;}
+    &.min{ width:50px; overflow: hidden;
+        .logo_b{ display: none;}
+        .logo_s{ display: inline-block;}
+    }
+}
+
+#appRight{ margin-left:180px; height:100%; @extend %trslow;
+    &.big{ margin-left: 50px;}
+}
+
+#navbar{ height:50px; line-height:50px; border-bottom:1px solid #e6e6e6; padding:0 10px; 
+    .el-icon-menu{ font-size:26px; color:#777; margin:0 10px;}
+}
+
+#main{ padding:30px 20px;}
+
+.login{ width:520px; position: absolute; left:0; right:0;  margin:120px auto; border:1px solid #ddd; padding:20px 30px;
+    
+}
