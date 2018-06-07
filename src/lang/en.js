@@ -2,7 +2,7 @@ export default {
     pageTitle: 'homePage',
     route:{
         admin: 'homePage',
-        member: 'member Info',
+        members: 'member Info',
         demo: 'demo'
     },
     navbar: {

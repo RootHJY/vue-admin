@@ -2,7 +2,7 @@ export default {
     pageTitle: '首页',
     route: {
         admin: '首页',
-        member: '会员信息',
+        members: '会员信息',
         demo: '示例'
     },
     navbar: {
