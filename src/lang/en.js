@@ -1,5 +1,7 @@
 export default {
     pageTitle: 'homePage',
+    zh: '简体中文',
+    en: 'English',
     route:{
         admin: 'homePage',
         members: 'member Info',
@@ -12,6 +14,10 @@ export default {
     login: {
         title: 'Login Form',
         btn: 'login'
+    },
+    form:{
+        username: 'username',
+        password: 'password'
     },
     error:{
         username: 'username error',

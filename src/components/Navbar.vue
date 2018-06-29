@@ -1,13 +1,13 @@
 <template>
     <div id="navbar" class="clearfix">
         <div class="leftMenu fleft">
-            <i class="iconfont icon-category ismiddle" @click="toggleSide()"></i>
+            <i class="fa fa-reorder ismiddle" @click="toggleSide()"></i>
             <BreadCrumb></BreadCrumb>
         </div>
         <div class="rightMenu fright">
             <el-dropdown style="margin-right:20px;">
                 <span class="el-dropdown-link">
-                    中文<i class="el-icon-arrow-down el-icon--right"></i>
+                    {{ $t($i18n.locale) }}<i class="el-icon-arrow-down el-icon--right"></i>
                 </span>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item >
@@ -24,7 +24,7 @@
                 </span>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item>
-                        <a target="_blank" href="http://testwww.coinfit.io/">交易所地址</a>
+                        <a target="_blank" href="http://www.baidu.com/">百度</a>
                     </el-dropdown-item>
                     <el-dropdown-item>
                         <p @click="logOut()">退出登录</p>
@@ -44,11 +44,6 @@
         components: {
             BreadCrumb
         },
-        data () {
-            return {
-
-            }
-        },
         created () {
 
         },
@@ -64,7 +59,7 @@
             },
             setLang(lang){
                 Cookies.set('language',lang);
-                this.$i18n.locale = lang
+                this.$i18n.locale = lang;
             }
         },
         computed: {

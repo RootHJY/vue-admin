@@ -3,7 +3,7 @@
         <sidebar :class="{ min: sidebar }"></sidebar>
         <div id="appRight" :class="{ big: sidebar }">
             <navbar></navbar>
-            <app-main></app-main>
+            <app-main  v-loading="loading"></app-main>
         </div>
     </div>
 </template>
@@ -19,8 +19,16 @@
             Sidebar,
             AppMain
         },
+        data() {
+            return {
+                loading: true
+            }
+        },
         created () {
 
+        },
+        mounted: function () {
+            this.loading = false
         },
         methods: {
 

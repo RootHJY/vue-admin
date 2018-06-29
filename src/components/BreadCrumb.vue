@@ -18,22 +18,38 @@
         name: 'navbar',
         data () {
             return {
-                levelList: null
+                levelList:[]
             }
         },
         created () {
-             this.getBreadcrumb();
+            this.getBreadcrumb();
         },
         methods: {
             generateTitle,
             getBreadcrumb() {
-                let matched = this.$route.matched.filter(item => item.name)
-                const first = matched[0]
-                if (first && first.name !== 'admin') {
-                    matched = [{ path: '/admin', meta: { title: this.$t("pageTitle") }}].concat(matched)
+                let matched = this.$route.matched.filter(item => item.name);
+                const second = matched[1];
+                //区分admin 和 非admin 跳转的页面
+
+                if(this.roles && this.roles.indexOf('admin') > -1){
+                    matched = [{ path: '/admin', meta: { title: this.$t("pageTitle") }}].concat(second)
+                }else{
+                    matched = [{ path: '/admin/demo', meta: { title: this.$t("pageTitle") }}].concat(second)
                 }
+
                 this.levelList = matched;
-            },
+                this.$set(this.$data, 'levelList', this.levelList);
+            },  
+        },
+        computed: {
+            roles() {
+                return this.$store.state.user.roles;
+            }
+        },
+        watch: {
+            '$route':function(to, from) {
+                this.getBreadcrumb()
+            }
         }
     }
 </script>

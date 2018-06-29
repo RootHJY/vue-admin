@@ -1,14 +1,20 @@
 <template>
   	<div class="hello">
     	<h1>{{$t("pageTitle")}}</h1>
+        <br/>
+        <br/>
         <el-row>
             <el-button type="danger" @click="setLang('zh')">中文</el-button> 
             <el-button type="success"  @click="setLang('en')">英文</el-button>
         </el-row>
+        <br/>
+        <br/>
     	<h2> 
-            多语言显示Exp: {{$t("navbar.dashboard")}}
+            多语言显示案例: {{$t("navbar.dashboard")}}
         </h2>
-        <h3>数据绑定Exp:</h3>
+        <br/>
+        <br/>
+        <h3>数据绑定案例:</h3>
         <ul>
             <li>ID:{{ info.id }}</li>
             <li>用户名:{{ info.username }}</li>
@@ -16,8 +22,13 @@
             <li>会员:{{ info.isMember }}</li>
             <li>会员:{{ info.time | formatDateMore }}</li>
         </ul>
+        <br/>
+        <br/>
 
-        <p v-show="error">多语言错误Exp: {{$t("error.password")}}  </p>
+        <p v-show="error">多语言错误案例: {{$t("error.password")}}  </p>
+
+        <br/>
+        <br/>
 
        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
             <el-form-item label="活动名称" prop="name">
@@ -82,7 +93,7 @@
       	name: 'login',
      	data () {
         	return {
-                info: "a",
+                info: '',
                 id: "1",
                 error: false,
                 ruleForm: {

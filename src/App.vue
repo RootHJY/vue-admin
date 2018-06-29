@@ -5,8 +5,7 @@
 </template>
 
 <script>
-    import '../static/css/page.css?ver=2017093'
-    import '../static/fonts/iconfont.css?ver=2017093'
+
     export default {
         name: 'App'
     }

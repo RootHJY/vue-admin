@@ -1,8 +1,10 @@
 export default {
     pageTitle: '首页',
+    zh: '简体中文',
+    en: 'English',
     route: {
         admin: '首页',
-        members: '会员信息',
+        members: '账户管理',
         demo: '示例'
     },
     navbar: {
@@ -12,6 +14,10 @@ export default {
     login: {
         title: '系统登录',
         btn: '登录'
+    },
+    form:{
+        username: '用户名',
+        password: '密码'
     },
     error:{
         username: '用户名不正确',
