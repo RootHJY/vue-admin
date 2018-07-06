@@ -29,8 +29,8 @@ npm run build
 #   BreadCrumb.vue  面包屑导航
 
 #   common.js   所有常用js 可以直接调用  
-                uniqueArr数组去重  
-                generateTitle 通过$t(i81N自带的函数) 函数和路由的参数翻译成对应的多语言
+#                uniqueArr数组去重  
+#                generateTitle 通过$t(i81N自带的函数) 函数和路由的参数翻译成对应的多语言
 
 #   index.vue  集成top(Navbar) + left(SideBar) + AppMain  默认首页     
 
