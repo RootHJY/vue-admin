@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Cookies from 'js-cookie'
-
 
 const demoComponents = r => require.ensure([], () => r(require('../views/demo')), 'demo');
 const notFound = r => require.ensure([], () => r(require('../views/404')), 'notFound');
